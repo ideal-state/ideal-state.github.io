@@ -1,7 +1,7 @@
 site_name: "Ideal State"
 site_author: ideal-state
 site_url: https://docs.idealstate.team/
-repo_name: ideal-state/ideal-state.github.io
+repo_name: ideal-state.github.io
 repo_url: https://github.com/ideal-state/ideal-state.github.io/
 edit_uri: edit/master/docs/
 
@@ -69,8 +69,7 @@ plugins:
   - search
   - privacy
   - git-revision-date-localized:
-      type: iso_datetime
-      custom_format: "%Y-%m-%d %H:%M:%S %Z"
+      type: timeago
       enable_creation_date: true
       fallback_to_build_date: true
   - git-committers:
