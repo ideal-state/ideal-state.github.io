@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Docs Index","text":""},{"location":"sugar/","title":"Sugar Index","text":""},{"location":"sugar/page-1/","title":"Docs Page 1","text":""},{"location":"sugar/page-n/","title":"Docs Page n","text":""}]}
