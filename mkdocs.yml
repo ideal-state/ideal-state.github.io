@@ -1,0 +1,6 @@
+site_name: Ideal State
+site_author: ideal-state
+site_url: https://ideal-state.github.io/
+
+theme:
+  name: material
