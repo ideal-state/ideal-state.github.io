@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install mkdocs-material mkdocs-material-extensions mkdocs-git-revision-date-localized-plugin mkdocs-git-committers-plugin-2
+
+      - name: Deploy Pages
+        env:
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.TOKEN }}
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+        run: mkdocs gh-deploy --force

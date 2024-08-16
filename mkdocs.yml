@@ -1,6 +1,128 @@
-site_name: Ideal State
+site_name: "Ideal State"
 site_author: ideal-state
-site_url: https://ideal-state.github.io/
+site_url: https://docs.idealstate.team/
+repo_name: ideal-state/ideal-state.github.io
+repo_url: https://github.com/ideal-state/ideal-state.github.io/
+edit_uri: edit/master/docs/
 
 theme:
   name: material
+  language: en
+  logo: assets/images/icon-white.png
+  favicon: assets/images/icon.png
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to system preference
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    - announce.dismiss
+    - navigation.footer
+    - content.action.edit
+
+nav:
+  - Sugar:
+      - sugar/index.md
+      - Page 1: sugar/page-1.md
+      - Page n: sugar/page-n.md
+
+plugins:
+  - search
+  - privacy
+  - git-revision-date-localized:
+      type: iso_datetime
+      custom_format: "%Y-%m-%d %H:%M:%S %Z"
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - git-committers:
+      repository: ideal-state/ideal-state.github.io
+      branch: master
+
+copyright: Copyright &copy; 2024 ideal-state
+
+extra:
+  # generator: false
+  direction: ltr
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    cookies:
+      analytics:
+        name: Google Analytics
+        checked: true
+      copyright:
+        name: >
+          Copyright &copy; 2024 ideal-state
+        checked: true
+    actions:
+      - accept
+      - manage
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_ID
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: Chinese
+      link: /
+      lang: zh
+  social:
+    - name: Email
+      icon: fontawesome/solid/envelope
+      link: mailto:support@ideal-state.team
+    - name: GitHub
+      icon: fontawesome/brands/github
+      link: https://github.com/ideal-state
+    - name: QQ
+      icon: fontawesome/brands/qq
+      link: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=GDjO3xW1Wgg9mI0MOyH6EXWn8DOUplhT&authKey=sMBqxQqTXtbE4Dl05MXcy5eXYjbpzLNN7dGPYL67rVCSk5NBrotNs22NNxnsulya&noverify=0&group_code=929450805
+    - name: Discord
+      icon: fontawesome/brands/discord
+      link: https://discord.gg/DdGhNzAu2r
+    - name: Telegram
+      icon: fontawesome/brands/telegram
+      link: https://t.me/+qqTKse6sTj0wNjI1
